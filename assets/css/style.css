@@ -513,19 +513,44 @@ h6 {
 }
 
 @keyframes float3 {
-    0% { transform: translate(0, 0) scale(1); }
-    25% { transform: translate(10px, 10px) scale(1); }
-    75% { transform: translate(-10px, -10px) scale(1); }
-    100% { transform: translate(0, 0) scale(1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        transform: translate(10px, 10px) scale(1);
+    }
+
+    75% {
+        transform: translate(-10px, -10px) scale(1);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
 }
 
 /* Mobile specific dynamic animation (larger movement) */
 @keyframes float-mobile {
-    0% { transform: translate(0, 0); }
-    25% { transform: translate(15px, 30px); }
-    50% { transform: translate(-15px, 0px); }
-    75% { transform: translate(10px, -30px); }
-    100% { transform: translate(0, 0); }
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(15px, 30px);
+    }
+
+    50% {
+        transform: translate(-15px, 0px);
+    }
+
+    75% {
+        transform: translate(10px, -30px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 /* Mobile Responsive */
@@ -535,6 +560,15 @@ h6 {
         flex-direction: column;
         min-height: 55vh;
         /* Reduced height */
+
+        /* Edge to Edge Fix */
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+        max-width: none;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
     }
 
     .app-sidebar {
