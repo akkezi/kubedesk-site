@@ -142,7 +142,7 @@
         function randomizeCards(container) {
             requestAnimationFrame(() => {
                 const cards = Array.from(container.querySelectorAll('.content-card'));
-                const isMobile = window.innerWidth <= 768;
+                const isMobile = window.innerWidth <= 1024; // Increased threshold for tablets/large phones
 
                 // Adjust grid based on screen size
                 const count = cards.length;
@@ -169,10 +169,13 @@
                         if (index < slots.length) {
                             const slot = slots[index];
                             const stepX = 90 / cols;
-                            const stepY = 80 / rows;
+
+                            // FORCE vertical spread: First row at top, Last row at bottom
+                            // Map row index (0 to rows-1) to (10% to 80%)
+                            const safeRows = rows > 1 ? rows - 1 : 1;
+                            const BaseY = 10 + (slot.y / safeRows) * 70;
 
                             const BaseX = 5 + (slot.x * stepX);
-                            const BaseY = 10 + (slot.y * stepY);
 
                             const offsetX = (Math.random() - 0.5) * 15;
                             const offsetY = (Math.random() - 0.5) * 15;
