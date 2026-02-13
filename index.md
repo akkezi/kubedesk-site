@@ -12,10 +12,10 @@ title: Home
         <div class="download-buttons">
             <!-- macOS Dropdown -->
             <div class="dropdown">
-                <button class="btn-pill btn-mac">
+                <a href="#" class="btn-pill btn-mac">
                     <img src="{{ site.baseurl }}/assets/images/apple.svg" class="os-icon" alt="macOS">
                     <span>Download for macOS</span>
-                </button>
+                </a>
                 <div class="dropdown-menu">
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-mac-arm64.dmg">Apple Silicon (M1/M2/M3)</a>
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-mac-x64.dmg">Intel Chip</a>
@@ -24,10 +24,10 @@ title: Home
 
             <!-- Windows Dropdown -->
             <div class="dropdown">
-                <button class="btn-pill btn-win">
+                <a href="#" class="btn-pill btn-win">
                     <img src="{{ site.baseurl }}/assets/images/windows.svg" class="os-icon" alt="Windows">
                     <span>Download for Windows</span>
-                </button>
+                </a>
                 <div class="dropdown-menu">
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-Setup.exe">Installer (.exe)</a>
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-Portable.exe">Portable (.exe)</a>
@@ -36,10 +36,10 @@ title: Home
 
             <!-- Linux Dropdown -->
             <div class="dropdown">
-                <button class="btn-pill btn-linux">
+                <a href="#" class="btn-pill btn-linux">
                     <img src="{{ site.baseurl }}/assets/images/linux.svg" class="os-icon" alt="Linux">
                     <span>Download for Linux</span>
-                </button>
+                </a>
                 <div class="dropdown-menu">
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk.AppImage">Portable AppImage</a>
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk_amd64.deb">Debian / Ubuntu (.deb)</a>
