@@ -114,13 +114,15 @@ h6 {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+    /* Reduced from 3.5rem */
     font-weight: 800;
     margin-bottom: 24px;
     background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .hero .subtitle {
@@ -163,14 +165,16 @@ h6 {
     background-color: #0d1117;
 }
 
-.download-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 80px;
-    align-items: center;
-    width: 100%;
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+margin-bottom: 120px;
+/* Increased from 80px */
+align-items: center;
+width: 100%;
+padding: 0 20px;
+/* Add padding for mobile safety */
 }
 
 /* Base Pill Button - Glassmorphism */
@@ -604,7 +608,8 @@ h6 {
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        /* Reduced for mobile */
     }
 
     .feature-grid {
@@ -620,12 +625,23 @@ h6 {
     .download-buttons {
         flex-direction: column;
         align-items: stretch;
-        /* Stack vertically and stretch */
-        gap: 15px;
-        max-width: 350px;
-        /* Limit width on mobile */
-        margin-left: auto;
-        margin-right: auto;
+        gap: 20px;
+        /* Clear gap between stacked buttons */
+        max-width: 100%;
+        /* Allow full width with padding */
+        padding: 0 20px;
+        margin-bottom: 60px;
+        /* Adjust for mobile */
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .btn-pill {
+        width: 100%;
+        justify-content: space-between;
+        /* Keep icon/arrow spread */
     }
 
     .dropdown {
