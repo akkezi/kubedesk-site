@@ -157,7 +157,7 @@
                 // 1. Determine Columns based on width
                 // Match CSS breakpoint exact behavior if possible, or just use width
                 const isSmallScreen = window.innerWidth <= 1024;
-                const numCols = isSmallScreen ? 2 : 4;
+                const numCols = isSmallScreen ? 1 : 4;
 
                 // 2. Shuffle cards
                 cards.sort(() => Math.random() - 0.5);
@@ -194,8 +194,15 @@
                         const Top = Math.max(0, Math.min(90, BaseY + (Math.random() * 10 - 5)));
 
                         // Random X within column
-                        // More padding (15%) to allow for Horizontal Oscillation
-                        const Left = xMin + 5 + (Math.random() * (colWidth - 25));
+                        // Random X within column
+                        let Left;
+                        if (isSmallScreen) {
+                            // On mobile (1 col), center roughly (10-40%) to allow horizontal oscillation room
+                            Left = 10 + (Math.random() * 30);
+                        } else {
+                            // Desktop
+                            Left = xMin + 5 + (Math.random() * (colWidth - 25));
+                        }
 
                         card.style.left = Left + '%';
                         card.style.top = Top + '%';
