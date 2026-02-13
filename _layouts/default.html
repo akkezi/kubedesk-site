@@ -55,34 +55,63 @@
     </footer>
 
     <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <img class="lightbox-content" id="lightbox-img">
-        <div id="caption"></div>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
 
     <script>
-        function openLightbox(img) {
-            var lightbox = document.getElementById("lightbox");
-            var lightboxImg = document.getElementById("lightbox-img");
-            var caption = document.getElementById("caption");
+        let currentIndex = 0;
+
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById("lightbox");
+            const allImages = Array.from(document.querySelectorAll('.gallery-scroll img'));
+
+            currentIndex = allImages.indexOf(imgElement);
+            updateLightboxImage();
 
             lightbox.style.display = "flex";
-            lightboxImg.src = img.src;
-            caption.innerHTML = img.alt;
             document.body.style.overflow = "hidden"; // Prevent scrolling
         }
 
         function closeLightbox() {
-            var lightbox = document.getElementById("lightbox");
-            lightbox.style.display = "none";
+            document.getElementById("lightbox").style.display = "none";
             document.body.style.overflow = "auto"; // Restore scrolling
         }
 
-        // Close on Escape key
-        document.addEventListener('keydown', function (event) {
-            if (event.key === "Escape") {
+        function changeSlide(n) {
+            const allImages = document.querySelectorAll('.gallery-scroll img');
+            currentIndex += n;
+            if (currentIndex >= allImages.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = allImages.length - 1;
+            updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+            const allImages = document.querySelectorAll('.gallery-scroll img');
+            const lightboxImg = document.getElementById("lightbox-img");
+            // Add check to ensure images exist
+            if (allImages.length > 0) {
+                lightboxImg.src = allImages[currentIndex].src;
+            }
+        }
+
+        // Close on click OUTSIDE image (on background)
+        document.getElementById('lightbox').addEventListener('click', function (e) {
+            if (e.target === this) {
                 closeLightbox();
+            }
+        });
+
+        // Keydown events
+        document.addEventListener('keydown', function (event) {
+            if (document.getElementById("lightbox").style.display === "flex") {
+                if (event.key === "Escape") closeLightbox();
+                if (event.key === "ArrowLeft") changeSlide(-1);
+                if (event.key === "ArrowRight") changeSlide(1);
             }
         });
     </script>

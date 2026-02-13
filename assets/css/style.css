@@ -448,6 +448,41 @@ h6 {
     backdrop-filter: blur(5px);
 }
 
+/* Lightbox Navigation */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 2001;
+}
+
+.next {
+    right: 20px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 20px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: var(--primary-color);
+}
+
 .lightbox-content {
     margin: auto;
     display: block;
