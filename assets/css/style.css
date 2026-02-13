@@ -71,11 +71,11 @@ h6 {
 }
 
 .site-l.os-icon {
-    width: 24px;
-    /* Slightly larger */
-    height: 24px;
-    display: inline-block;
-    vertical-align: middle;
+    width: 26px;
+    /* Optimized size */
+    height: 26px;
+    display: block;
+    /* Works better with flex */
 }
 
 .site-logo {
@@ -146,7 +146,8 @@ h6 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
+    /* Increased gap */
     padding: 12px 30px;
     border-radius: 50px;
     /* Pill shape */
@@ -167,15 +168,14 @@ h6 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* macOS Button: Black */
+/* macOS Button: White */
 .btn-mac {
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #333;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .btn-mac:hover {
-    background-color: #1a1a1a;
+    background-color: #f0f0f0;
 }
 
 /* Windows Button: White */
@@ -188,16 +188,14 @@ h6 {
     background-color: #f0f0f0;
 }
 
-/* Linux Button: Secondary/Dark Gray or Brand Color */
+/* Linux Button: White */
 .btn-linux {
-    background-color: #24292f;
-    /* GitHub Dark Gray style */
-    color: #ffffff;
-    border: 1px solid #444;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .btn-linux:hover {
-    background-color: #2f363d;
+    background-color: #f0f0f0;
 }
 
 /* Dropdown Container */
@@ -572,5 +570,29 @@ h6 {
     .site-footer .container {
         flex-direction: column;
         gap: 30px;
+    }
+
+    /* Mobile Buttons */
+    .download-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        /* Stack vertically and stretch */
+        gap: 15px;
+        max-width: 350px;
+        /* Limit width on mobile */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .dropdown {
+        display: block;
+        /* Full width */
+        width: 100%;
+    }
+
+    .btn-pill {
+        width: 100%;
+        /* Use full available width */
+        justify-content: center;
     }
 }
