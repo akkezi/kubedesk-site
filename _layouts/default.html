@@ -186,22 +186,46 @@
                         }
                     });
                 } else {
-                    // MOBILE: Pure Random Distribution (Chaos Mode)
-                    // Spread from 0% to 90% to use the absolute full surface
-                    cards.forEach((card, index) => {
-                        card.classList.remove('visible');
-                        makeDraggable(card);
+                    // MOBILE: Deterministic "Zoned" Distribution
+                    // 1. Shuffle cards to mix content positions
+                    cards.sort(() => Math.random() - 0.5);
 
-                        const randomX = Math.random() * 90;
-                        const randomY = Math.random() * 90;
-
-                        card.style.left = randomX + '%';
-                        card.style.top = randomY + '%';
-
-                        applyAnimation(card, true);
-
-                        setTimeout(() => { card.classList.add('visible'); }, index * 30);
+                    // 2. Split into 2 columns for better spread
+                    const col1 = [];
+                    const col2 = [];
+                    cards.forEach((card, i) => {
+                        if (i % 2 === 0) col1.push(card);
+                        else col2.push(card);
                     });
+
+                    // 3. Helper to position a column
+                    const distributeColumn = (items, xMin, xMax) => {
+                        const rowHeight = 90 / items.length; // Divide 90% height by item count
+                        items.forEach((card, i) => {
+                            card.classList.remove('visible');
+                            makeDraggable(card);
+
+                            // Vertical: Guaranteed slot + random jitter
+                            // e.g., if 4 items: 0-22%, 22-45%, 45-67%, 67-90%
+                            const BaseY = (i * rowHeight) + 2; // +2% padding/offset
+                            const JitterY = Math.random() * (rowHeight * 0.4); // Jitter up to 40% of slot height
+                            const Top = BaseY + JitterY;
+
+                            // Horizontal: Random within column bounds
+                            const Left = xMin + (Math.random() * (xMax - xMin));
+
+                            card.style.top = Top + '%';
+                            card.style.left = Left + '%';
+
+                            applyAnimation(card, true);
+                            setTimeout(() => { card.classList.add('visible'); }, i * 50);
+                        });
+                    };
+
+                    // Left Column (0% - 40%)
+                    distributeColumn(col1, 0, 40);
+                    // Right Column (50% - 90%)
+                    distributeColumn(col2, 50, 95);
                 }
             });
         }

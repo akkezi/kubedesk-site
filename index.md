@@ -89,15 +89,16 @@ title: Home
 <section class="gallery">
     <div class="container">
         <div class="gallery-scroll">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/002.png" alt="Cluster View" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/003.png" alt="Pod Details" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/004.png" alt="Terminal" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/005.png" alt="Settings" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/006.png" alt="Screenshot 006" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/007.png" alt="Screenshot 007" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/008.png" alt="Screenshot 008" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/009.png" alt="Logs" onclick="openLightbox(this)">
-            <img src="{{ site.baseurl }}/assets/images/screenshots/010.png" alt="Screenshot 010" onclick="openLightbox(this)">
+						<img src="{{ site.baseurl }}/assets/images/screenshots/001.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/002.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/003.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/004.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/005.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/006.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/007.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/008.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/009.png" alt="Screenshot" onclick="openLightbox(this)">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/010.png" alt="Screenshot" onclick="openLightbox(this)">
         </div>
     </div>
 </section>
