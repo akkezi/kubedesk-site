@@ -21,9 +21,19 @@ title: Home
         </div>
         
         <div class="hero-image">
-            <div class="placeholder-screenshot">
-                <span>Application Screenshot Placeholder</span>
-            </div>
+            <img src="{{ site.baseurl }}/assets/images/screenshots/001.png" alt="KubeDesk Dashboard" class="app-screenshot">
+        </div>
+    </div>
+</section>
+
+<section class="gallery">
+    <div class="container">
+        <div class="gallery-scroll">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/002.png" alt="Cluster View">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/003.png" alt="Pod Details">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/004.png" alt="Terminal">
+            <img src="{{ site.baseurl }}/assets/images/screenshots/005.png" alt="Settings">
+             <img src="{{ site.baseurl }}/assets/images/screenshots/009.png" alt="Logs">
         </div>
     </div>
 </section>

@@ -79,9 +79,9 @@ h6 {
     gap: 10px;
 }
 
-.logo-icon {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+.logo-img {
+    height: 32px;
+    width: auto;
 }
 
 .site-nav {
@@ -172,23 +172,64 @@ h6 {
     font-size: 1.2rem;
 }
 
-.placeholder-screenshot {
+.app-screenshot {
     width: 100%;
-    max-width: 900px;
-    height: 500px;
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px -10px rgba(124, 58, 237, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    border: none;
+    display: block;
     margin: 0 auto;
+}
+
+/* Gallery */
+.gallery {
+    padding: 0 0 80px;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.gallery-scroll {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-color);
-    font-size: 1.5rem;
-    box-shadow: 0 0 100px rgba(124, 58, 237, 0.1);
-    background-image: linear-gradient(45deg, #131720 25%, transparent 25%, transparent 75%, #131720 75%, #131720), linear-gradient(45deg, #131720 25%, transparent 25%, transparent 75%, #131720 75%, #131720);
-    background-position: 0 0, 10px 10px;
-    background-size: 20px 20px;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 20px 20px 40px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 4px;
+}
+
+.gallery-scroll img {
+    height: 300px;
+    /* Adjusted height */
+    width: auto;
+    /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    scroll-snap-align: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.gallery-scroll img:hover {
+    transform: scale(1.02);
+    border-color: var(--primary-color);
 }
 
 /* Features */
