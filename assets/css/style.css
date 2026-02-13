@@ -191,30 +191,30 @@ padding: 0 20px;
     justify-content: space-between;
     /* Space out icon, text, arrow */
     gap: 15px;
-    padding: 16px 24px;
-    border-radius: 12px;
     /* Slightly squarer for "pro" look */
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.2s ease;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    /* Solid Black/Dark for high contrast like reference */
-    background: #0d1117;
+    border: 2px solid #000000;
+    /* Thicker black border */
+    background: #ffffff;
     font-family: var(--font-stack);
     min-width: 260px;
-    color: #ffffff;
+    color: #000000;
+    /* Black text */
     text-decoration: none;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 1);
+    /* Retro/Solid shadow */
 }
 
 .btn-pill:hover {
     transform: translateY(-2px);
-    border-color: #ffffff;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    background: #161b22;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 1);
+    background: #f0f0f0;
+    border-color: #000000;
 }
 
 .btn-pill:active {
@@ -230,23 +230,20 @@ padding: 0 20px;
 
 /* Icons - STRICT SIZING */
 .os-icon {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    /* Prevent shrinking */
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
-    fill: currentColor;
-    opacity: 0.9;
 }
 
+/* Arrow removed in preview.html, hiding it or making sure flex works */
 .arrow-icon {
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    flex-shrink: 0;
-    opacity: 0.6;
-    transition: transform 0.2s;
-    margin-left: auto;
+    display: none;
+    /* User's preview.html didn't have arrows */
+}
+
+.btn-pill span {
+    flex-grow: 0;
+    /* Standard center */
 }
 
 .btn-pill:hover .arrow-icon {

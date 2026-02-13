@@ -12,9 +12,8 @@ title: Home
             <!-- macOS Dropdown -->
             <div class="dropdown">
                 <button class="btn-pill btn-mac">
-                    <svg class="os-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z"/></svg>
+                    <img src="{{ site.baseurl }}/assets/images/apple.svg" class="os-icon" alt="macOS">
                     <span>Download for macOS</span>
-                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg>
                 </button>
                 <div class="dropdown-menu">
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-mac-arm64.dmg">Apple Silicon (M1/M2/M3)</a>
@@ -25,9 +24,8 @@ title: Home
             <!-- Windows Dropdown -->
             <div class="dropdown">
                 <button class="btn-pill btn-win">
-                    <svg class="os-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z"/></svg>
+                    <img src="{{ site.baseurl }}/assets/images/windows.svg" class="os-icon" alt="Windows">
                     <span>Download for Windows</span>
-                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg>
                 </button>
                 <div class="dropdown-menu">
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-Setup.exe">Installer (.exe)</a>
@@ -38,11 +36,15 @@ title: Home
             <!-- Linux Dropdown -->
             <div class="dropdown">
                 <button class="btn-pill btn-linux">
-                    <svg class="os-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path fill="currentColor" d="M512 448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0h384c35.3 0 64 28.7 64 64v384zM153.6 288c-14.1 0-25.6 11.5-25.6 25.6 0 14.1 11.5 25.6 25.6 25.6 14.1 0 25.6-11.5 25.6-25.6 0-14.1-11.5-25.6-25.6-25.6zm204.8 0c-14.1 0-25.6 11.5-25.6 25.6 0 14.1 11.5 25.6 25.6 25.6 14.1 0 25.6-11.5 25.6-25.6 0-14.1-11.5-25.6-25.6-25.6zm-59.5-125.6c-4.2-13.8-21.6-15.6-26.6-2.4-1.9 4.9-2.6 10.3-2.1 15.6l1.3 12.5c.3 3.3 2.1 6.2 5 7.8 2.8 1.6 6.2 1.5 9-.4l11.1-7.2c2.7-1.8 7-2.6 10.1-2.2 4.1 .5 7.7 3.3 8.3 7.5 .4 3-.5 6-2.4 8.3-2.1 2.5-5.2 3.9-8.4 3.7l-15.2-1c-15.3-1-28.8-11.7-32.3-26.7-2.5-10.9 .8-22 8.7-29.6 10.1-9.6 25-11.7 36.6-5.1 8 4.6 13.9 12 16.5 21l2.5 8.7c.3 1.1-.3 2.2-1.4 2.5s-2.2-.3-2.5-1.4l-2.5-8.7c-1.8-6.1-5.7-11.2-11.1-14.4-8.8-5.1-19.8-3.1-26.5 4.3zm67.8 1.8c1.9-4.9 2.6-10.3 2.1-15.6l-1.3-12.5c-.3-3.3-2.1-6.2-5-7.8-2.8-1.6-6.2-1.5-9 .4l-11.1 7.2c-2.7 1.8-7 2.6-10.1 2.2-4.1-.5-7.7-3.3-8.3-7.5-.4-3 .5-6 2.4-8.3 2.1-2.5 5.1-3.9 8.3-3.7l15.2 1c15.3 1 28.8 11.7 32.3 26.7 2.5 10.9-.8 22-8.7 29.6-10.1 9.6-25 11.7-36.6 5.1-8-4.6-13.9-12-16.5-21l-2.5-8.7c-.3-1.1 .3-2.2 1.4-2.5s2.2 .3 2.5 1.4l2.5 8.7c1.8 6.1 5.7 11.2 11.1 14.4 8.8 5.1 19.8 3.1 26.5-4.3 4.2 13.8 21.6 15.6 26.6 2.4zM245.9 378.1c-11.6 0-21.7 6.4-27 16-1.5 2.7-5 3.7-7.8 2.2s-3.7-5-2.2-7.8c7-12.7 20.3-21.2 35.6-21.2s28.6 8.5 35.6 21.2c1.5 2.7 .5 6.1-2.2 7.8s-6.3 .7-7.8-2.2c-5.3-9.6-15.4-16-27-16zM151.7 391.8c.8-1.1 2.4-1.5 3.7-.8 27.6 15.6 63.6 15.6 91.2 0 1.3-.8 2.9-.3 3.7 .8l16.2 21.6c.9 1.2 .8 2.9-.3 4l-42 42c-2.3 2.3-6.1 2.3-8.5 0l-42-42c-1.1-1.1-1.2-2.8-.3-4l16.2-21.6z"/></svg>
+                    <img src="{{ site.baseurl }}/assets/images/linux.svg" class="os-icon" alt="Linux">
                     <span>Download for Linux</span>
-                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zM432 456c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg>
                 </button>
                 <div class="dropdown-menu">
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk.AppImage">Portable AppImage</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk_amd64.deb">Debian / Ubuntu (.deb)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk.x86_64.rpm">RedHat / Fedora (.rpm)</a>
+                </div>
+            </div>
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk.AppImage">Portable AppImage</a>
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk_amd64.deb">Debian / Ubuntu (.deb)</a>
                     <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk.x86_64.rpm">RedHat / Fedora (.rpm)</a>

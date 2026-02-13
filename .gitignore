@@ -4,3 +4,7 @@ _site/
 .jekyll-cache/
 gemfiles/
 Gemfile.lock
+preview.html
+windows.svg
+linux.svg
+apple.svg
