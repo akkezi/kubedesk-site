@@ -131,14 +131,15 @@ h6 {
     font-weight: 400;
 }
 
-.download-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 60px;
-    align-items: center;
-    /* Ensure alignment */
+display: flex;
+justify-content: center;
+gap: 30px;
+/* Increased gap */
+flex-wrap: wrap;
+margin-bottom: 80px;
+/* Increased bottom margin */
+align-items: center;
+width: 100%;
 }
 
 /* Base Pill Button */
@@ -146,9 +147,8 @@ h6 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
-    /* Increased gap */
-    padding: 12px 30px;
+    gap: 15px;
+    padding: 15px 30px;
     border-radius: 50px;
     /* Pill shape */
     font-weight: 600;
@@ -168,34 +168,58 @@ h6 {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* macOS Button: White */
+/* macOS Button: Black Pill with Border */
 .btn-mac {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .btn-mac:hover {
-    background-color: #f0f0f0;
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Windows Button: White */
+/* Windows Button: Black Pill with Border */
 .btn-win {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .btn-win:hover {
-    background-color: #f0f0f0;
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-/* Linux Button: White */
+/* Linux Button: Black Pill with Border */
 .btn-linux {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .btn-linux:hover {
-    background-color: #f0f0f0;
+    background-color: #1a1a1a;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Arrow Icon Style */
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    margin-left: auto;
+    /* Push to right */
+    opacity: 0.8;
+}
+
+.btn-pill span {
+    flex-grow: 1;
+    /* Center text */
+    text-align: center;
 }
 
 /* Dropdown Container */
