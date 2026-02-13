@@ -126,50 +126,125 @@ h6 {
 .download-buttons {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 60px;
+    align-items: center;
+    /* Ensure alignment */
 }
 
-.btn {
+/* Base Pill Button */
+.btn-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 14px 28px;
-    border-radius: 8px;
+    gap: 10px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    /* Pill shape */
     font-weight: 600;
-    transition: all 0.2s ease;
     font-size: 1rem;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    border: none;
+    font-family: var(--font-stack);
+    min-width: 220px;
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--btn-text);
-    box-shadow: 0 4px 14px 0 rgba(124, 58, 237, 0.39);
-}
-
-.btn-primary:hover {
-    background-color: var(--secondary-color);
-    color: #fff;
+.btn-pill:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.23);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.btn-secondary {
-    background-color: var(--card-bg);
+/* macOS Button: Black */
+.btn-mac {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+.btn-mac:hover {
+    background-color: #1a1a1a;
+}
+
+/* Windows Button: White */
+.btn-win {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-win:hover {
+    background-color: #f0f0f0;
+}
+
+/* Linux Button: Secondary/Dark Gray or Brand Color */
+.btn-linux {
+    background-color: #24292f;
+    /* GitHub Dark Gray style */
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+.btn-linux:hover {
+    background-color: #2f363d;
+}
+
+/* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #161b22;
+    min-width: 220px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
     border: 1px solid var(--border-color);
+    z-index: 1000;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center dropdown */
+    overflow: hidden;
+}
+
+/* Links inside the dropdown */
+.dropdown-menu a {
     color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: background-color 0.2s;
 }
 
-.btn-secondary:hover {
-    border-color: var(--primary-color);
-    color: var(--heading-color);
+/* Change color of dropdown links on hover */
+.dropdown-menu a:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
 }
 
-.os-icon {
-    font-size: 1.2rem;
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
 
 .app-screenshot {
@@ -182,6 +257,72 @@ h6 {
     border: none;
     display: block;
     margin: 0 auto;
+}
+
+/* Object Visibility Grid */
+.object-visibility {
+    padding: 100px 0;
+    background-color: #0d1117;
+    border-top: 1px solid var(--border-color);
+}
+
+.object-visibility h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.object-visibility .subtitle {
+    text-align: center;
+    color: #8b949e;
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+}
+
+.object-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.object-category {
+    background-color: #010409;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    transition: border-color 0.2s;
+}
+
+.object-category:hover {
+    border-color: var(--primary-color);
+}
+
+.object-category h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.object-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.object-category li {
+    color: #8b949e;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+}
+
+.object-category li::before {
+    content: "•";
+    color: var(--border-color);
+    position: absolute;
+    left: 0;
 }
 
 /* Gallery */

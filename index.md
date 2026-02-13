@@ -6,22 +6,78 @@ title: Home
 <section class="hero">
     <div class="container">
         <h1>The Desktop Client for Kubernetes Cluster Management</h1>
-        <p class="subtitle">Manage multiple clusters, view resources, and debug in real-time. Built with Electron, React, and Go for maximum performance.</p>
+        <p class="subtitle">Gain complete visibility into your clusters. Browse, inspect, and analyze all Kubernetes objects in real-time. Built with Electron, React, and Go.</p>
         
         <div class="download-buttons">
-            <a href="https://github.com/akkezi/KubeDesk/releases" class="btn btn-primary">
-                <span class="os-icon"></span> Download for macOS
-            </a>
-            <a href="https://github.com/akkezi/KubeDesk/releases" class="btn btn-primary">
-                <span class="os-icon">⊞</span> Download for Windows
-            </a>
-            <a href="https://github.com/akkezi/KubeDesk/releases" class="btn btn-primary">
-                <span class="os-icon">🐧</span> Download for Linux
-            </a>
+            <!-- macOS Dropdown -->
+            <div class="dropdown">
+                <button class="btn-pill btn-mac">
+                    <span class="os-icon"></span> Download for macOS
+                </button>
+                <div class="dropdown-menu">
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-mac-arm64.dmg">Apple Silicon (M1/M2/M3)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-mac-x64.dmg">Intel Chip</a>
+                </div>
+            </div>
+
+            <!-- Windows Dropdown -->
+            <div class="dropdown">
+                <button class="btn-pill btn-win">
+                    <span class="os-icon">⊞</span> Download for Windows
+                </button>
+                <div class="dropdown-menu">
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-Setup.exe">Installer (.exe)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-Portable.exe">Portable (.exe)</a>
+                </div>
+            </div>
+
+            <!-- Linux Dropdown -->
+            <div class="dropdown">
+                <button class="btn-pill btn-linux">
+                    <span class="os-icon">🐧</span> Download for Linux
+                </button>
+                <div class="dropdown-menu">
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk.AppImage">Portable AppImage</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk_amd64.deb">Debian / Ubuntu (.deb)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk.x86_64.rpm">RedHat / Fedora (.rpm)</a>
+                </div>
+            </div>
         </div>
         
         <div class="hero-image">
             <img src="{{ site.baseurl }}/assets/images/screenshots/001.png" alt="KubeDesk Dashboard" class="app-screenshot">
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>Unmatched Observability & Visualization</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🔄 Multi-Cluster Management</h3>
+                <p>Switch between multiple Kubernetes clusters seamlessly from a single interface. Monitor all your environments without context switching.</p>
+            </div>
+            <div class="feature-card">
+                <h3>👀 Ultimate Resource Viewer</h3>
+                <p>Browse all your K8s resources with a beautiful and intuitive UI. Designed for administrators to audit and inspect cluster status.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📜 Real-time Logs</h3>
+                <p>Stream pod logs instantly in read-only mode. Filter, search, and analyze logs to diagnose issues faster.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📄 Manifest Viewer</h3>
+                <p>Inspect the full YAML configuration of any object. syntax highlighting helps you understand exactly how your resources are defined.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚓ Helm Deployment & Catalog</h3>
+                <p>Deploy Helm charts directly to your cluster. Browse and install from a rich catalog of available Helm repositories.</p>
+            </div>
+             <div class="feature-card">
+                <h3>🧩 Custom Resource Inspection</h3>
+                <p>Native support for viewing Custom Resource Definitions (CRDs) and their instances. See the full picture of your extensions.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -38,33 +94,96 @@ title: Home
     </div>
 </section>
 
-<section class="features">
+<section class="object-visibility">
     <div class="container">
-        <h2>Everything you need for Kubernetes</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                <h3>🔄 Multi-Cluster Management</h3>
-                <p>Switch between multiple Kubernetes clusters seamlessly from a single interface. No more context switching hell.</p>
+        <h2>Comprehensive Object Visibility</h2>
+        <p class="subtitle">Access detailed information for every Kubernetes object without touching the CLI.</p>
+        <div class="object-grid">
+            <div class="object-category">
+                <h3>Dashboard & Events</h3>
+                <ul>
+                    <li>Dashboard Overview</li>
+                    <li>Cluster Events</li>
+                </ul>
             </div>
-            <div class="feature-card">
-                <h3>👀 Resource Viewer</h3>
-                <p>Browse all your K8s resources (Pods, Deployments, Services, ConfigMaps) with a beautiful and intuitive UI.</p>
+            <div class="object-category">
+                <h3>Infrastructure</h3>
+                <ul>
+                    <li>Nodes</li>
+                    <li>Namespaces</li>
+                    <li>Resource Quotas</li>
+                    <li>Limit Ranges</li>
+                    <li>Leases</li>
+                </ul>
             </div>
-            <div class="feature-card">
-                <h3>⌨️ Interactive Terminal</h3>
-                <p>Exec into containers directly with full terminal support. Debug issues without leaving the app.</p>
+            <div class="object-category">
+                <h3>Workloads</h3>
+                <ul>
+                    <li>Pods & Templates</li>
+                    <li>Deployments</li>
+                    <li>StatefulSets</li>
+                    <li>DaemonSets</li>
+                    <li>ReplicaSets</li>
+                    <li>Jobs & CronJobs</li>
+                    <li>Replication Controllers</li>
+                </ul>
             </div>
-            <div class="feature-card">
-                <h3>📜 Real-time Logs</h3>
-                <p>Stream pod logs instantly. Filter and search through logs to find exactly what you need.</p>
+             <div class="object-category">
+                <h3>Configuration</h3>
+                <ul>
+                    <li>ConfigMaps</li>
+                    <li>Secrets</li>
+                    <li>Runtime Classes</li>
+                    <li>HPA</li>
+                    <li>Pod Disruption Budgets</li>
+                    <li>Priority Classes</li>
+                </ul>
             </div>
-            <div class="feature-card">
-                <h3>📝 YAML Editor</h3>
-                <p>Built-in Monaco Editor with syntax highlighting and validation for editing resources on the fly.</p>
+            <div class="object-category">
+                <h3>Networking</h3>
+                <ul>
+                    <li>Services</li>
+                    <li>Endpoints & Slices</li>
+                    <li>Ingress & Classes</li>
+                    <li>Network Policies</li>
+                </ul>
             </div>
-             <div class="feature-card">
-                <h3>⚓ Helm & CRD Support</h3>
-                <p>Deploy and manage Helm charts. Native support for Custom Resource Definitions.</p>
+            <div class="object-category">
+                <h3>Storage</h3>
+                <ul>
+                    <li>Storage Classes</li>
+                    <li>Persistent Volumes (PV)</li>
+                    <li>Volume Claims (PVC)</li>
+                    <li>Volume Attachments</li>
+                    <li>CSI Drivers & Nodes</li>
+                </ul>
+            </div>
+            <div class="object-category">
+                <h3>Access Control</h3>
+                <ul>
+                    <li>Service Accounts</li>
+                    <li>Roles & Bindings</li>
+                    <li>Cluster Roles & Bindings</li>
+                    <li>CSR</li>
+                </ul>
+            </div>
+            <div class="object-category">
+                <h3>Admission & Dynamic</h3>
+                <ul>
+                    <li>Mutating/Validating Webhooks</li>
+                    <li>Validating Policies</li>
+                    <li>Device Classes</li>
+                    <li>Resource Claims</li>
+                </ul>
+            </div>
+             <div class="object-category">
+                <h3>Applications & CRDs</h3>
+                <ul>
+                    <li>Helm Charts & Releases</li>
+                    <li>Repositories</li>
+                    <li>Custom Resource Definitions</li>
+                    <li>GitOps (Planned)</li>
+                </ul>
             </div>
         </div>
     </div>
@@ -75,7 +194,7 @@ title: Home
         <h2>Built on Modern Tech</h2>
         <p class="stack-subtitle">Engineered for performance and reliability.</p>
         <div class="stack-grid">
-            <div class="stack-item"><span>⚛️</span> React 18</div>
+            <div class="stack-item"><span>⚛️</span> React</div>
             <div class="stack-item"><span>📘</span> TypeScript</div>
             <div class="stack-item"><span>🐹</span> Go (Backend)</div>
             <div class="stack-item"><span>⚡</span> Electron</div>
