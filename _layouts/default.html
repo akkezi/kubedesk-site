@@ -199,22 +199,6 @@
             });
         }
 
-        card.style.left = (BaseX + offsetX) + '%';
-        card.style.top = (BaseY + offsetY) + '%';
-
-        // Random delay for "Alive" feel
-        card.style.animationDelay = (Math.random() * 2) + 's';
-        card.style.animationDuration = (3 + Math.random() * 3) + 's';
-
-        // Pop in effect
-        setTimeout(() => {
-            card.classList.add('visible');
-        }, index * 50); // Staggered appearance
-                    }
-                });
-            });
-        }
-
         // Init first tab on load
         document.addEventListener('DOMContentLoaded', () => {
             const startTab = document.querySelector('.sidebar-item.active');
