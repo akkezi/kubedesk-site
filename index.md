@@ -18,8 +18,8 @@ title: Home
                     <span>Download for Windows</span>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-Setup.exe">Installer (.exe)</a>
-                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-Portable.exe">Portable (.exe)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-0.3.4_Windows_Setup.exe">Installer (.exe)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-0.3.4_Windows_Portable.exe">Portable (.exe)</a>
                 </div>
             </div>
 						
@@ -30,9 +30,9 @@ title: Home
                     <span>Download for Linux</span>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk.AppImage">Portable AppImage</a>
-                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk_amd64.deb">Debian / Ubuntu (.deb)</a>
-                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk.x86_64.rpm">RedHat / Fedora (.rpm)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-0.3.4_Linux_Portable.AppImage">Portable AppImage</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk-0.3.4_amd64.deb">Debian / Ubuntu (.deb)</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/kubedesk-0.3.4.x86_64.rpm">RedHat / Fedora (.rpm)</a>
                 </div>
             </div>
 						
@@ -43,8 +43,8 @@ title: Home
                     <span>Download for macOS</span>
                 </a>
                 <div class="dropdown-menu">
-                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-mac-arm64.dmg">Apple Silicon</a>
-                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-mac-x64.dmg">Intel Chip</a>
+                    <a href="https://github.com/akkezi/KubeDesk/releases/latest/download/KubeDesk-0.3.4_macOS_intel.dmg">Intel Chip</a>
+                    <a href="#">Apple Silicon (Soon)</a>
                 </div>
             </div>
 						
